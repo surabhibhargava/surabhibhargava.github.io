@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-05T12:21:22+05:30</updated><id>http://localhost:4000/</id><title type="html">Surabhi Bhargava</title><entry><title type="html">Generalized Nuclear Segmentation in Computational Pathology</title><link href="http://localhost:4000/Generalized-Nuclear-Segmentation-in-Computational-Pathology/" rel="alternate" type="text/html" title="Generalized Nuclear Segmentation in Computational Pathology" /><published>2017-02-25T00:00:00+05:30</published><updated>2017-02-25T00:00:00+05:30</updated><id>http://localhost:4000/Generalized%20Nuclear%20Segmentation%20in%20Computational%20Pathology</id><content type="html" xml:base="http://localhost:4000/Generalized-Nuclear-Segmentation-in-Computational-Pathology/">&lt;p&gt;As a part of our Bachelors' thesis project, &lt;a href=&quot;https://sanuj.github.io/&quot;&gt;Sanuj&lt;/a&gt; and I worked on developing a deep learning based technique to segment out nuclei in histopathological images. As a part of this project, we have also released an open source dataset of H&amp;amp;E stained tissue images with more than 21,000 painstakingly annotated nuclear boundaries.&lt;/p&gt;
+
+&lt;p&gt;This work has been published in the IEEE Transactions on Medical Imaging.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/Detection-and-Segmentation-of-Nuclei-in-Computational-Pathology/&quot;&gt;This&lt;/a&gt; is a more detailed blog post about the project.&lt;/p&gt;</content><author><name>surabhibhargava</name></author><category term="projects" /><summary type="html">As a part of our Bachelors' thesis project, Sanuj and I worked on developing a deep learning based technique to segment out nuclei in histopathological images. As a part of this project, we have also released an open source dataset of H&amp;amp;E stained tissue images with more than 21,000 painstakingly annotated nuclear boundaries.</summary></entry><entry><title type="html">Detection and Segmentation of nuclei in Computational Pathology</title><link href="http://localhost:4000/Detection-and-Segmentation-of-Nuclei-in-Computational-Pathology/" rel="alternate" type="text/html" title="Detection and Segmentation of nuclei in Computational Pathology" /><published>2017-02-25T00:00:00+05:30</published><updated>2017-02-25T00:00:00+05:30</updated><id>http://localhost:4000/Detection%20and%20Segmentation%20of%20Nuclei%20in%20Computational%20Pathology</id><content type="html" xml:base="http://localhost:4000/Detection-and-Segmentation-of-Nuclei-in-Computational-Pathology/">&lt;h3&gt;&lt;b&gt; Introduction &lt;/b&gt;&lt;/h3&gt;
+
+&lt;p&gt;Detection and segmentation of nuclei in histopathological images has numerous biomedical applications. The conventional method involves manual inspection and analyses performed by pathologists to make diagnostic and prognostic assessments based on certain features of the nucleus.&lt;/p&gt;
+
+&lt;p&gt;Manual annotation of nuclei and inspection of the derived features is a highly tedious and time consuming process. Hence many computer aided image analysis techniques of automating this analysis have been proposed. Existing approaches dealing with detection and segmentation of nuclei are rather limited and generally fail to segment touching or overlapping nuclei. Even if they succeed, the shape of the nucleus is often distorted.&lt;/p&gt;
+
+&lt;p&gt;We have converted this segmentation problem into a three class classification problem where each pixel can be classified into one of the three classes: Inside nucleus, Boundary and Not nucleus and not boundary.&lt;/p&gt;
+
+&lt;p&gt;Further we have developed a post-processing technique which segments nuclei having different markers as separate.&lt;/p&gt;
+
+&lt;h3&gt;&lt;b&gt; Methodology &lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;This section consists of three parts:&lt;/p&gt;
+
+&lt;p&gt;1) &lt;b&gt; Data Preparation and Pre - Processing &lt;/b&gt;: &lt;br /&gt;
+&lt;b&gt; Annotations &lt;/b&gt;: In order to prepare the ground truth for CNN training, manual annotations have been performed using Aperio ImageScope. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Ternary Maps&lt;/b&gt;: Ternary maps are generated using annotations which are further used as the labels for training. A pixel takes one of the three gray scale values:&lt;br /&gt;
+-* A pixel inside nucleus : 255 &lt;br /&gt;
+-* A pixel on the boundary : 128 &lt;br /&gt;
+-* A pixel not inside nucleus and not on boundary : 0 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The figure below shows a test image, its annotations as what it appears in ImageScope while annotating and the resulting ternary map.&lt;br /&gt;
+&lt;!-- &lt;img src=&quot;/img/assets/testImage.png&quot; width=&quot;200&quot; /&gt; &lt;img src=&quot;/img/assets/annotatedImage.png&quot; width=&quot;200&quot;/&gt; --&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Annotated Image&lt;/th&gt;
+      &lt;th&gt;Ternary Map&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/testImage.png&quot; alt=&quot;Test Image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/annotatedImage.png&quot; alt=&quot;Annotated Image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/ternaryMap.png&quot; alt=&quot;Ternary Map&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;b&gt;Color Normalization&lt;/b&gt;: It is used to normalize the variation in stain colors across different images. All images are made to appear similar to a target image using color normalization. We have adopted the technique in &lt;a href=&quot;http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7460968&quot;&gt;this&lt;/a&gt; paper. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The images below show a source image, target image and a normalized image. It may be clearly seen that the source image is colour normalized to appear like the target image. This results in an improvement of accuracy since the images have similar appearance while training and testing.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Source Image&lt;/th&gt;
+      &lt;th&gt;Target Image&lt;/th&gt;
+      &lt;th&gt;Normalized Image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/sourceImg.png&quot; alt=&quot;Source Image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/targetImg.png&quot; alt=&quot;Target Image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/normalizedImg.png&quot; alt=&quot;Normalized Image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+2) &lt;b&gt;The Convolutional Neural Network &lt;/b&gt;:&lt;br /&gt;
+A convolutional neural network (CNN) has been used to predict the class of a pixel by feeding in a small window around the pixel as the input to the CNN. Each pixel is classified as nucleus, boundary or not nucleus and not boundary.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The architecture of the Convolutional Neural Network is mentioned in the table below. We have used Torch for training and testing the CNN.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The dataset used had images of 20x and 40x resolution and a slightly different architecture has been used for the two resolutions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/arch.jpg&quot; alt=&quot;CNN arch&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/architecture.png&quot; alt=&quot;Architecture details&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3)&lt;b&gt; CNN output and Post - processing:&lt;/b&gt; Probability maps for each class are obtained as the output of the CNN. We obtain nuclei maps from these probability maps by thresholding and applying the post-processing technique developed.&lt;/p&gt;
+
+&lt;p&gt;The flow chart below describes the post-processing technique used.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/postpro.jpg&quot; width=&quot;550&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Post-Processing Technique:&lt;/b&gt;
+&lt;br /&gt;
+Probability Maps and Coloured maps for a given test image:&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Nucleus Probability Map&lt;/th&gt;
+      &lt;th&gt;Boundary Probability Map&lt;/th&gt;
+      &lt;th&gt;Non-Nucleus Probability Map&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/tp.png&quot; alt=&quot;Test Img&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/pm.png&quot; alt=&quot;Nucleus Prob Map&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/bpm.png&quot; alt=&quot;boundary pm&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/nnpm.png&quot; alt=&quot;Non Nuc pm&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Binary Map&lt;/th&gt;
+      &lt;th&gt;Coloured Map&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/tp.png&quot; alt=&quot;Test Img&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/bin.png&quot; alt=&quot;Bianry Map&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/color.png&quot; alt=&quot;Colour map&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;b&gt; Some More Results &lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Detection &amp;amp; Segmentation Results for 20x resolution Prostate gland biopsy images:&lt;/b&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Coloured map&lt;/th&gt;
+      &lt;th&gt;Coloured map superimposed on image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/1t.png&quot; alt=&quot;Test Img&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/1m.png&quot; alt=&quot;Coloured Map&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/1c.png&quot; alt=&quot;Colour map superimposed on image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Coloured map&lt;/th&gt;
+      &lt;th&gt;Coloured map superimposed on image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/2t.png&quot; alt=&quot;Test Img&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/2m.png&quot; alt=&quot;Coloured Map&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/2c.png&quot; alt=&quot;Colour map superimposed on image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;b&gt;Detection &amp;amp; Segmentation Results for 40x resolution Prostate gland biopsy image:&lt;/b&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Test Image&lt;/th&gt;
+      &lt;th&gt;Coloured map&lt;/th&gt;
+      &lt;th&gt;Coloured map superimposed on image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/3t.png&quot; alt=&quot;Test Img&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/3m.png&quot; alt=&quot;Coloured Map&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/3c.png&quot; alt=&quot;Colour map superimposed on image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;b&gt; Acknowledgements &lt;/b&gt;&lt;/h4&gt;
+&lt;p&gt;This work was started as a part of my final year thesis project along with &lt;a href=&quot;https://sanuj.github.io/about/&quot;&gt;Sanuj&lt;/a&gt; under the guidance of &lt;a href=&quot;http://www.iitg.ernet.in/amitsethi/&quot;&gt;Prof. Amit Sethi&lt;/a&gt;, Neeraj Kumar Vaid, Abhishek Vahadane and Ruchika Verma.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has recently been published in the IEEE Transactions on Medical Imaging.&lt;br /&gt;
+ &lt;a href=&quot;http://nucleisegmentationbenchmark.weebly.com/&quot;&gt; Click here &lt;/a&gt; to get Nuclei segmentation code and dataset and the paper.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.iitg.ernet.in/amitsethi/posters/16.SharmaBhargava.pdf&quot;&gt;Click here&lt;/a&gt; to get our Thesis poster.&lt;/p&gt;</content><author><name>surabhibhargava</name></author><category term="blog" /><summary type="html">Introduction</summary></entry><entry><title type="html">Image Fusion using Guided Filtering</title><link href="http://localhost:4000/Image-Fusion-Using-Guided-Filtering/" rel="alternate" type="text/html" title="Image Fusion using Guided Filtering" /><published>2016-04-01T00:00:00+05:30</published><updated>2016-04-01T00:00:00+05:30</updated><id>http://localhost:4000/Image%20Fusion%20Using%20Guided%20Filtering</id><content type="html" xml:base="http://localhost:4000/Image-Fusion-Using-Guided-Filtering/">&lt;p&gt;This project was done as a part of my Computer Vision Course Project.&lt;/p&gt;
+
+&lt;p&gt;The algorithm is an implementation of the paper: Li, Shutao, Xudong Kang, and Jianwen Hu. &quot;Image fusion with guided filtering.&quot; Image Processing, IEEE Transactions on 22.7 (2013): 2864-2875.&lt;/p&gt;
+
+&lt;p&gt;A few results of the image fusion are as follows. Here, the first two images are fused to form the third image.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Image 1&lt;/th&gt;
+      &lt;th&gt;Image 2&lt;/th&gt;
+      &lt;th&gt;Fused Image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/a09_1.png&quot; alt=&quot;Image 1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/a09_2.png&quot; alt=&quot;Image 2&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/a09_fused.png&quot; alt=&quot;Fused Image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Image 1&lt;/th&gt;
+      &lt;th&gt;Image 2&lt;/th&gt;
+      &lt;th&gt;Fused Image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/b01_1.png&quot; alt=&quot;Image 1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/b01_2.png&quot; alt=&quot;Image 2&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/b01_fused.png&quot; alt=&quot;Fused Image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Image 1&lt;/th&gt;
+      &lt;th&gt;Image 2&lt;/th&gt;
+      &lt;th&gt;Fused Image&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/c01_1.png&quot; alt=&quot;Image 1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/c01_2.png&quot; alt=&quot;Image 2&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/c01_fused.png&quot; alt=&quot;Fused Image&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For more information and code, please checkout &lt;a href=&quot;https://github.com/sanuj/fuse-img&quot;&gt;this&lt;/a&gt; Git repository.&lt;/p&gt;</content><author><name>surabhibhargava</name></author><category term="projects" /><summary type="html">This project was done as a part of my Computer Vision Course Project.</summary></entry><entry><title type="html">Machine Learning Mini Projects</title><link href="http://localhost:4000/Machine-Learning-Mini-Projects/" rel="alternate" type="text/html" title="Machine Learning Mini Projects" /><published>2015-05-01T00:00:00+05:30</published><updated>2015-05-01T00:00:00+05:30</updated><id>http://localhost:4000/Machine%20Learning%20Mini%20Projects</id><content type="html" xml:base="http://localhost:4000/Machine-Learning-Mini-Projects/"></content><author><name>surabhibhargava</name></author><category term="projects" /><summary type="html"></summary></entry><entry><title type="html">Dynammic Programming: Top Down approach</title><link href="http://localhost:4000/Dynammic-Programming-A-top-down-approach/" rel="alternate" type="text/html" title="Dynammic Programming: Top Down approach" /><published>2015-02-05T00:00:00+05:30</published><updated>2015-02-05T00:00:00+05:30</updated><id>http://localhost:4000/Dynammic%20Programming%20-%20A%20top%20down%20approach</id><content type="html" xml:base="http://localhost:4000/Dynammic-Programming-A-top-down-approach/">&lt;h3&gt;&lt;b&gt;What is Dynammic Programming?!? &lt;/b&gt;&lt;/h3&gt;
+
+&lt;p&gt;Dynamic programming or DP is a very powerful technique to solve a particular class of problems. The idea is very simple - If you have solved a problem with the given input, then save the result for future reference, so as to avoid solving the same problem again.&lt;/p&gt;
+
+&lt;p&gt;Consider the following: &lt;br /&gt;
+	A &lt;em&gt;writes down “1+1+1+1+1+1+1+1 =” on a sheet of paper&lt;/em&gt;.&lt;br /&gt;
+	A : “What’s that equal to?”&lt;br /&gt;
+	B : &lt;em&gt;counting&lt;/em&gt; “Eight!”&lt;br /&gt;
+	A &lt;em&gt;writes down another “1+” on the left&lt;/em&gt;&lt;br /&gt;
+	A : “What about that?”&lt;br /&gt;
+	B : &lt;em&gt;quickly&lt;/em&gt; “Nine!”&lt;br /&gt;
+	A : “How’d you know it was nine so fast?”&lt;br /&gt;
+	A : “You just added one more”&lt;br /&gt;
+	A : “So you didn’t need to recount because you remembered there were eight! &lt;b&gt;Dynamic Programming is just a fancy way to say ‘remembering stuff to save time later’”&lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Such problems can generally be broken down into smaller subproblems over and over again and these smaller subproblems are in turn divided in to still-smaller ones until we reach the base case, the solution to which we specify.&lt;/p&gt;
+
+&lt;h3&gt;&lt;b&gt; How can these problem be approached ? &lt;/b&gt;&lt;/h3&gt;
+
+&lt;p&gt;There are two approches to solve a DP problem-&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;-A top down approach : &lt;br /&gt;Start solving the given problem by breaking it down. If you see that the problem has been solved already, then just return the saved answer. If it has not been solved, solve it and save the answer. This is usually easy to think of and very intuitive. This is referred to as Memoization.&lt;/p&gt;
+
+&lt;p&gt;-A bottom up approach :&lt;br /&gt;  Analyze the problem and see the order in which the sub-problems are solved and start solving from the trivial subproblem, up towards the given problem. In this process, it is guaranteed that the subproblems are solved before solving the problem.&lt;/p&gt;
+
+&lt;p&gt;The solutions to dynammic programming problems are widely available on the internet but most of the sources provide a bottom up approach to these problems while I feel that for a beginner, a top down approach is easier to follow as it is just an addition of memoization to a recursive solution.&lt;/p&gt;
+
+&lt;h4&gt;&lt;b&gt; Seps to come up with a dynamic programming solution &lt;/b&gt;&lt;/h4&gt;
+
+&lt;p&gt;1) &lt;b&gt; Think of a recursive approach to solving the problem and code it!&lt;/b&gt;&lt;br /&gt;
+Create a function that solves the problem at hand. Decide what all arguments should be passed to the function for it to work in the desired fashion. Take a leap of faith and assuming your function solves the problem, write a recursive code for it.&lt;/p&gt;
+
+&lt;p&gt;2) &lt;b&gt; Identify where in your code, same problems are being computed again and again. &lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;3) &lt;b&gt; Store results - Memoize! &lt;/b&gt;
+Save the results you get for every function run so that if its called again, you do not recompute the whole thing and return just the stored value.&lt;/p&gt;
+
+&lt;p&gt;As an example, I have solved the problem of finding the Nth term of Fibbonacci Series using both the Dynammic Programming approaches:&lt;/p&gt;
+
+&lt;p&gt;TOP DOWN APPROACH:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	#include &amp;lt;iostream&amp;gt;
+	#include &amp;lt;vector&amp;gt;
+	using namespace std;
+	// The function fib returns the n th term of the Fibonacci Series
+	int fib (int n, vector&amp;lt;int&amp;gt; &amp;amp;dp){
+		if (n==0 || n==1) return 1; // base case
+		else if(dp[n]==-1){
+		// enters inside this else only if the value of n th term of the fibonacci series is not calculated
+			dp[n] = fib(n-1, dp) + fib(n-2, dp); // memoization of the recursive approach
+		}
+		return dp[n]; // return the stored value
+	}
+
+	int main() {
+		int n;
+		cin &amp;gt;&amp;gt; n;
+		vector&amp;lt;int&amp;gt; dp(n+1,-1); // create a vector for memoization, initialize it to -1 i.e. value hasn't been computed yet
+		cout &amp;lt;&amp;lt; fib(n,dp) &amp;lt;&amp;lt; endl;
+		return 0;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;BOTTOM UP APPROACH:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	#include &amp;lt;iostream&amp;gt;
+	#include &amp;lt;vector&amp;gt;
+	using namespace std;
+
+	// The function fib returns the n th term of the Fibonacci Series
+	int fib(int n) {
+	  vector&amp;lt;int&amp;gt; f(n+1,-1); // array to store the computed values
+	  int i;
+	  f[0] = 0;   
+	  f[1] = 1;
+	  for (i = 2; i &amp;lt;= n; i++)
+	      f[i] = f[i-1] + f[i-2]; // a for loop which calculates the values of fibonacci series for all i&amp;lt;=n
+	  return f[n];
+	}
+
+	int main () {
+	  int n;
+	  cin &amp;gt;&amp;gt; n;
+	  cout &amp;lt;&amp;lt; fib(n) &amp;lt;&amp;lt; endl;
+	  return 0;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The difference between the two approaches is in the order in which the value for a particular ‘n’ is calculated.&lt;br /&gt;
+ In the bottom up approach, we build the solution from n=0 to n while in top down approach we break the problem for computing fib(n) in to two smaller subproblems of computing fib(n-1) and fib(n-2) and so on.&lt;/p&gt;
+
+&lt;p&gt;The idea behind these is essentially the same - “Save the results you get for every function run so that if its called again, you do not recompute the whole thing and return just the stored value.”&lt;/p&gt;
+
+&lt;p&gt;I have solved various Dynammic Programming problems using the top down approach which can be found &lt;a href=&quot;https://github.com/surabhibhargava/Dynammic-Programming-Top-Down-Approach&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+The idea behind DP is very simple but solving these problems may get overwhelming. &lt;br /&gt;
+Following is a list of resources that I followed for understanding DP.&lt;br /&gt;
+-&lt;a href=&quot;http://www.geeksforgeeks.org/fundamentals-of-algorithms/#DynamicProgramming&quot; target=&quot;_blank&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;br /&gt;
+-Tushar Roy’s Youtube&lt;a href=&quot;https://www.youtube.com/watch?v=8LusJS5-AGo&amp;amp;list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr&quot; target=&quot;_blank&quot;&gt; Videos&lt;/a&gt;&lt;br /&gt;
+-If you’re preparing for Placement interviews then you may try &lt;a href=&quot;https://leetcode.com/tag/dynamic-programming/&quot; target=&quot;_blank&quot;&gt;Leetcode&lt;/a&gt;, &lt;a href=&quot;https://www.interviewbit.com/&quot; target=&quot;_blank&quot;&gt;InterviewBit&lt;/a&gt; and the book  &lt;a href=&quot;http://www.eenadupratibha.net/Engineering-Colleges/Engineering-Jobs/Documents/crackingthecodinginterview.pdf&quot; target=&quot;_blank&quot;&gt;Cracking the Coding Interview &lt;/a&gt;for your preparation.&lt;/p&gt;</content><author><name>surabhibhargava</name></author><category term="blog" /><summary type="html">What is Dynammic Programming?!?</summary></entry><entry><title type="html">Timing model for two stage buffer &amp;amp; its applications in ECSM characterization</title><link href="http://localhost:4000/Timing-model-for-two-stage-buffer-&-its-applications-in-ECSM-characterization/" rel="alternate" type="text/html" title="Timing model for two stage buffer &amp; its applications in ECSM characterization" /><published>2014-07-01T00:00:00+05:30</published><updated>2014-07-01T00:00:00+05:30</updated><id>http://localhost:4000/Timing%20model%20for%20two%20stage%20buffer%20&amp;%20its%20applications%20in%20ECSM%20characterization</id><content type="html" xml:base="http://localhost:4000/Timing-model-for-two-stage-buffer-&amp;-its-applications-in-ECSM-characterization/"></content><author><name>surabhibhargava</name></author><summary type="html"></summary></entry></feed>
