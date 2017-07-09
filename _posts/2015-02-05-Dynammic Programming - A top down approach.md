@@ -1,5 +1,5 @@
 ---
-title: "Dynammic Programming: Top Down approach"
+title: "Dynamic Programming: Top Down approach"
 layout: post
 date: 2015-02-05 00:00
 <!-- image: /assets/images/markdown.jpg -->
@@ -8,10 +8,10 @@ tag:
 
 category: blog
 author: surabhibhargava
-description: Top Down Approach to Dynammic Programming
+description: Top Down Approach to Dynamic Programming
 ---
 
-<h3><b>What is Dynammic Programming?!? </b></h3>
+<h3><b>What is Dynamic Programming?!? </b></h3>
 
 Dynamic programming or DP is a very powerful technique to solve a particular class of problems. The idea is very simple - If you have solved a problem with the given input, then save the result for future reference, so as to avoid solving the same problem again.
 
@@ -36,7 +36,7 @@ There are two approches to solve a DP problem-<br>
 
 -A bottom up approach :<br>  Analyze the problem and see the order in which the sub-problems are solved and start solving from the trivial subproblem, up towards the given problem. In this process, it is guaranteed that the subproblems are solved before solving the problem.
 
-The solutions to dynammic programming problems are widely available on the internet but most of the sources provide a bottom up approach to these problems while I feel that for a beginner, a top down approach is easier to follow as it is just an addition of memoization to a recursive solution.
+The solutions to dynamic programming problems are widely available on the internet but most of the sources provide a bottom up approach to these problems while I feel that for a beginner, a top down approach is easier to follow as it is just an addition of memoization to a recursive solution.
 
 <h4><b> Seps to come up with a dynamic programming solution </b></h4>
 
@@ -48,7 +48,7 @@ Create a function that solves the problem at hand. Decide what all arguments sho
 3) <b> Store results - Memoize! </b>
 Save the results you get for every function run so that if its called again, you do not recompute the whole thing and return just the stored value.
 
-As an example, I have solved the problem of finding the Nth term of Fibbonacci Series using both the Dynammic Programming approaches:
+As an example, I have solved the problem of finding the Nth term of Fibbonacci Series using both the Dynamic Programming approaches:
 
 TOP DOWN APPROACH:
 
@@ -102,7 +102,7 @@ The difference between the two approaches is in the order in which the value for
 
 The idea behind these is essentially the same - "Save the results you get for every function run so that if its called again, you do not recompute the whole thing and return just the stored value."
 
-I have solved various Dynammic Programming problems using the top down approach which can be found <a href="https://github.com/surabhibhargava/Dynammic-Programming-Top-Down-Approach" target="_blank">here</a>.<br>
+I have solved various Dynamic Programming problems using the top down approach which can be found <a href="https://github.com/surabhibhargava/Dynammic-Programming-Top-Down-Approach" target="_blank">here</a>.<br>
 The idea behind DP is very simple but solving these problems may get overwhelming. <br>
 Following is a list of resources that I followed for understanding DP.<br>
 -<a href="http://www.geeksforgeeks.org/fundamentals-of-algorithms/#DynamicProgramming" target="_blank">GeeksForGeeks</a><br>
