@@ -1,6 +1,6 @@
 # main text of home
 name: Surabhi Bhargava
-bio: PayPal  |  IIT Guwahati
+bio: Graduate Student at Columbia University
 
 # twitter summary info
 # description: A blog about technology and stuff related
@@ -14,7 +14,7 @@ picture: assets/images/profile.jpg
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://drive.google.com/file/d/0B5ZVopn8__2IUi1oRnlqdHRHVms/view?usp=sharing
+resume-url: https://drive.google.com/file/d/0B5ZVopn8__2IM2QwZDJqclh3Ymc/view?usp=sharing
 
 url: https://surabhibhargava.github.io
 # your url: http://USERNAME.github.io
@@ -54,7 +54,7 @@ email: surabhi9b@gmail.com
 authors:
     surabhibhargava:
         name: Surabhi Bhargava
-        bio: PayPal  |  IIT Guwahati
+        bio: Graduate Student at Columbia University
         external-image: false
         picture: assets/images/profile.jpg
         # twitter: surabhi9b
