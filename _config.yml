@@ -24,12 +24,12 @@ description: Surabhi Bhargava
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  Research: "publications"
+  Research: "research"
   Talks: "talks"
 #  Resume: "resume"
   Misc:
     - Blog: "blog"
-    - Get Nurtured: "https://getnurtured.web.app/"
+    - Get Nurtured: "getnurtured"
     - Get in Touch: "contact"
 
 
