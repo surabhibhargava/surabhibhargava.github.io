@@ -27,7 +27,7 @@ navbar-links:
   Research: "research"
   Talks: "talks"
 #  Resume: "resume"
-  Misc:
+  More:
     - Blog: "blog"
     - Get Nurtured: "getnurtured"
     - Get in Touch: "contact"
