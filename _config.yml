@@ -1,103 +1,211 @@
-# main text of home
-name: Surabhi Bhargava
-bio: Graduate Student at Columbia University
+# --- General options --- #
 
-# twitter summary info
-# description: A blog about technology and stuff related
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-# if it's an external image, update below for true
-# better with square images
-external-image: false
-picture: assets/images/profile.jpg
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+url: "https://surabhibhargava.github.io"
+baseurl: ""
 
-# If you want to include your resume, set to true
-# and specify source (external or local).
-resume: true
-resume-external: true
-resume-url: https://drive.google.com/file/d/0B5ZVopn8__2IM2QwZDJqclh3Ymc/view?usp=sharing
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
 
-url: https://surabhibhargava.github.io
-# your url: http://USERNAME.github.io
+# Of course don't forget to change the username and projectname to YOUR username and project
 
-permalink: /:title/
+# Name of website
+title: Surabhi Bhargava
 
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+# Short description of your site
+description: Personal Website
 
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
+# --- Navigation bar options --- #
 
-# if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: surabhibhargava # enter this from your disqus account
-  categories: [blog, projects] # [blog, project] # only show disqus for posts that have these categories
+# List of links in the navigation bar
+navbar-links:
+  Home: ""
+  Publications: "publications"
+  Talks: "talks"
+#  Resume: "resume"
+  Misc:
+    - Blog: "blog"
+    - Get Nurtured: "https://getnurtured.web.app/"
 
-# if you don't have any of social below, comment the line
-facebook: surabhi.bhrgv
-twitter: surabhi9b
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# linkedin: mylinkedin
-# youtube: myyoutube
-# spotify: myspotify
-github: surabhibhargava
-# lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
-# quora: userquora
-# reddit: username
-# medium: medium
-# vimeo: myvimeo
-email: surabhi9b@gmail.com
 
-authors:
-    surabhibhargava:
-        name: Surabhi Bhargava
-        bio: Graduate Student at Columbia University
-        external-image: false
-        picture: assets/images/profile.jpg
-        # twitter: surabhi9b
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/static/img/surabhi.png"
 
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: large
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+# title-img: "/static/img/surabhi.png"
 
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+# --- Footer options --- #
 
-# if you don't need projects, comment the *projects* configs below
-projects: true
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Surabhi Bhargava
+  email: "surabhi9b@gmail.com"
+#  github: surabhibhargava    # eg. daattali
+  linkedin: surabhibhargava
+#  twitter: surabhi9b
 
-# if you don't need "about" or "blog", comment them out below
-about: true
-blog: true
+# Select which links to show in the footer
+footer-links-active:
+  rss: false
+  facebook: false
+  email: true
+  twitter: true
+  google-plus: false
+  github: true
+  reddit: false
+  linkedin: true
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+  telephone: false
 
-# do you want to show the "read time" of the posts?
-# read-time: true
+# Select which share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: false
+  google: true
+  linkedin: false
 
-# do you want to show the "tags" inside the posts?
-show-tags: true
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+#url-pretty: "deanattali.com/beautiful-jekyll"
 
-# related posts inside a post?
-# related: true
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
 
-# Display links for next and previous posts for the specified categories
-#post-advance-links: [blog, projects]
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
 
-# show author block at the end of a post ?
-show-author: true
+# Google Tag Manager ID
+#gtm: ""
 
-# do you want some animations?
-animation: true
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 200
+
+# Character used to separate site title and description in HTML document title
+# and RSS feed title
+title-separator: "-"
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "America/New_York"
+markdown: kramdown
+mathjax: true
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
+
+# Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
+link-tags: false
+
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE
+  - README.md
+  - Vagrantfile
+
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "Add a thumbnail image to your post."
+          placeholder: "Thumbnail"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
 
 gems:
-  - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+  - jekyll-paginate
 
-jekyll-mentions:
-    base_url: https://github.com
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
+
+theme: 
