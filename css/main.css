@@ -165,7 +165,7 @@ img {
   transition: opacity 0.5s ease-in-out;
   left: 50%;
   width: 50px;
-  margin-top: 0px;
+  margin-top: -25px;
 }
 .navbar-custom .avatar-container  .avatar-img-border {
   width: 100%;
@@ -424,7 +424,7 @@ footer .theme-by {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 110px 0 20px;
+  margin: 80px 0 20px;
   position: relative;
 }
 .intro-header.big-img {
