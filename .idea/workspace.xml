@@ -3,205 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2fbae2f5-e254-4557-bc95-039ddb56a817" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/analytics-google.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/analytics-piwik.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/author.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/blog-post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/disqus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/disqus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/favicon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/pagination.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/read-time.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/related.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/social-links.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/compress.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2014-07-01-Timing model for two stage buffer &amp; its applications in ECSM characterization.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-02-05-Dynamic Programming - A top down approach.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-05-01-Machine Learning Mini Projects.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-01-Image Fusion Using Guided Filtering.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-25-Detection and Segmentation of Nuclei in Computational Pathology.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-25-Generalized Nuclear Segmentation in Computational Pathology.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/_posts of the theme/2015-02-24-markdown-extra-components.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/_posts of the theme/2016-01-23-indigo-jekyll-theme.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/_posts of the theme/2016-02-24-markdown-common-elements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/base/general.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/base/helpers.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/base/normalize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/base/syntax.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/base/variables.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/author.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/disqus.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/footer.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/header.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/nav.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/others.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/pagination.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/related.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/share.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/side-by-side.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/social-links.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/spoiler.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pages/home-blog-projects.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pages/page.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pages/post.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pages/tags.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Detection-and-Segmentation-of-Nuclei-in-Computational-Pathology/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Dynamic-Programming-A-top-down-approach/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Generalized-Nuclear-Segmentation-in-Computational-Pathology/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Image-Fusion-Using-Guided-Filtering/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Machine-Learning-Mini-Projects/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Rakefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Timing-model-for-two-stage-buffer-&amp;-its-applications-in-ECSM-characterization/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/1m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/1t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/2m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/2t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/3c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/3m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/3t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/a09_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/a09_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/a09_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/annotatedImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/arch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/arch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/architecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/b01_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/b01_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/b01_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/bin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/bpm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/c01_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/c01_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/c01_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-114x114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-57x57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/code.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon-128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon-196x196.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/mstile-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/mstile-310x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/mstile-310x310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/favicon/mstile-70x70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/james.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/jekyll-logo-light-solid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/markdown.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/images/profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/nnpm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/normalizedImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/pm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/postpro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/screen-shot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/sourceImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/targetImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/ternaryMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/testImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/tp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/projects/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tags/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/travis.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/1m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/1t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/2m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/2t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/3c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/3m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/3t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/a09_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/a09_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/a09_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/annotatedImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/arch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/arch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/architecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/b01_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/b01_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/b01_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bpm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/c01_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/c01_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/c01_fused.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-114x114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-57x57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/code.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon-128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon-196x196.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/mstile-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/mstile-310x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/mstile-310x310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/favicon/mstile-70x70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/james.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/jekyll-logo-light-solid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/markdown.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nnpm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/normalizedImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/pm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/postpro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/screen-shot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sourceImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/targetImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/ternaryMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/testImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/travis.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/publications/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/publications/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/talks/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/talks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.md" beforeDir="false" afterPath="$PROJECT_DIR$/blog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publications.md" beforeDir="false" afterPath="$PROJECT_DIR$/publications.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/talks.md" beforeDir="false" afterPath="$PROJECT_DIR$/talks.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,7 +189,7 @@
       <updated>1499591766420</updated>
       <workItem from="1660432792286" duration="790000" />
       <workItem from="1660433751515" duration="5195000" />
-      <workItem from="1660519671142" duration="2874000" />
+      <workItem from="1660519671142" duration="3732000" />
     </task>
     <servers />
   </component>
@@ -419,6 +225,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
