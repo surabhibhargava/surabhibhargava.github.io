@@ -14,22 +14,23 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Surabhi Bhargava
+title:
 
 # Short description of your site
-description: Personal Website
+description: Surabhi Bhargava
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  Publications: "publications"
+  Research: "publications"
   Talks: "talks"
 #  Resume: "resume"
   Misc:
     - Blog: "blog"
     - Get Nurtured: "https://getnurtured.web.app/"
+    - Get in Touch: "contact"
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -56,9 +57,9 @@ footer-links-active:
   rss: false
   facebook: false
   email: true
-  twitter: true
+  twitter: false
   google-plus: false
-  github: true
+  github: false
   reddit: false
   linkedin: true
   xing: false
@@ -71,10 +72,10 @@ footer-links-active:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: true
+  twitter: false
   facebook: false
-  google: true
-  linkedin: false
+  google: false
+  linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
@@ -99,7 +100,7 @@ excerpt_length: 200
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
-title-separator: "-"
+title-separator: ""
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
