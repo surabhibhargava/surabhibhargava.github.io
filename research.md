@@ -3,12 +3,12 @@ layout: page
 title: Research
 ---
 ****
-I am deeply passionate about research in my field.
-I am broadly interested in research that combines multiple modalities to make use of the vast amount of information that is available to us, particularly in the fields of Computer Vision and Natural Language Processing. 
 
-Through my work at Adobe, I have taken a keen interest in understanding the interactions of humans and machine learning models. 
-As Machine Learning models become ubiquitous, it's incredibly important for us to gain a better understanding of these interactions and the influence they have on our decision-making.
-This includes human-in-the-loop ML, interpretability and explainability of ML models, their affect on human decision-making and the subjectivity that's present while annotating data and evaluations.
+Through my work, I have taken a keen interest in understanding the interactions of humans and machine learning models. 
+As Machine Learning models become ubiquitous, it's incredibly important for us to gain a better understanding of these interactions, and the influence they have on our decision-making.
+This includes human-in-the-loop ML, interpretability and explainability of ML models, their effect on human decision-making and the subjectivity that's present while annotating data and evaluations.
+
+My early research focused on computer vision and multimodal learning.
 <br/>
 <br/>
 
