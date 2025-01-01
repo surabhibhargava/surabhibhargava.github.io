@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbae2f5-e254-4557-bc95-039ddb56a817" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,12 +86,17 @@
   "keyToString": {
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/surabhibhargava/personal/surabhibhargava.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/static/img" />
     </key>
   </component>
@@ -198,7 +207,7 @@
       <workItem from="1660432792286" duration="790000" />
       <workItem from="1660433751515" duration="5195000" />
       <workItem from="1660519671142" duration="4591000" />
-      <workItem from="1735703183503" duration="15000" />
+      <workItem from="1735703183503" duration="1481000" />
     </task>
     <servers />
   </component>
